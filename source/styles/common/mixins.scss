@@ -1,0 +1,42 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-url) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-url;
+    font-display: swap;
+  }
+}
+
+@mixin font-full(
+  $font-family: $lato-font,
+  $font-size: 14px,
+  $line-height: 18px,
+  $font-weight: 400,
+  $color: $primary-color
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin before-after($width, $height, $display: block, $content: "") {
+  width: $width;
+  height: $height;
+  display: $display;
+  content: $content;
+}
+
+@mixin full-flex(
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $flex-flow: row wrap,
+  $display: flex
+) {
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-flow: $flex-flow;
+  display: $display;
+}

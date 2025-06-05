@@ -1,0 +1,144 @@
+.main-header {
+  padding-block: 13px 0;
+  position: relative;
+
+  &::after {
+    @include before-after(100%, 1px);
+    background-color: #d9d9d9;
+    margin-top: 11px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-block: 25px 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-block: 54px 0;
+  }
+
+  &--home {
+    &::after {
+      background-color: $primary-bg-color;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-bottom: 25px;
+      position: relative;
+    }
+  }
+
+  &--home::before {
+    @media screen and (min-width: $desktop-width) {
+      @include before-after(100%, 100%);
+      background-image:
+        linear-gradient(to left, rgba($basic-green, 0.85) 50%, $primary-bg-color 50%),
+        linear-gradient(to left, #4e4f53 50%, $primary-bg-color 50%);
+      background-size: 100% auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    &--nojs {
+      padding-bottom: 0;
+    }
+
+    &--nojs::after {
+      background-color: $primary-bg-color;
+      margin-top: -1px;
+    }
+  }
+}
+
+.main-header__container {
+  @include full-flex(space-between, center);
+  margin-inline: auto;
+  color: $secondary-color;
+  padding: 0 20px;
+  gap: 16px;
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-start;
+    width: 768px;
+    padding-inline: 30px 34px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-inline: auto;
+    width: 1220px;
+    padding-inline: 0;
+  }
+}
+
+.main-header--home .main-header__container {
+  @media screen and (min-width: $tablet-width) {
+    padding-right: 36px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.main-header--program .main-header__container {
+  @media screen and (min-width: $tablet-width) {
+    padding-right: 31px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  width: 190px;
+  justify-content: space-between;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 174px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 200px;
+  }
+}
+
+.main-header__logo-image {
+  width: 33px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 60px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 70px;
+  }
+}
+
+.main-header__logo-text {
+  width: 101px;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 118px;
+  }
+}

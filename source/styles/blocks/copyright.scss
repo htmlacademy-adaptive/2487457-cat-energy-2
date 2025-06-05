@@ -1,0 +1,49 @@
+.copyright {
+  @include full-flex(flex-start, center);
+  gap: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $primary-color;
+
+  &::before {
+    @include before-after(280px, 1px);
+    background-color: $decorate-social-color;
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include before-after(27px, 34px);
+    margin-left: auto;
+    background-color: $special-grey;
+    mask-image: url("../../icons/stack.svg#html-academy");
+    mask-repeat: no-repeat;
+    mask-position: right;
+    mask-size: 27px 34px;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  max-width: 114px;
+  word-wrap: break-word;
+}

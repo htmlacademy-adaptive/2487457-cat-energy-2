@@ -1,0 +1,56 @@
+.address__map {
+  position: relative;
+}
+
+.address__map-js {
+  width: 100%;
+  display: block;
+  border: none;
+  min-height: 362px;
+  position: relative;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+}
+
+.address__map-nojs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  min-height: 362px;
+  background-image:
+    image-set(
+      url("../../images/background/map-mobile@1x.webp") 1x,
+      url("../../images/background/map-mobile@1x.png") 1x,
+      url("../../images/background/map-mobile@2x.webp") 2x,
+      url("../../images/background/map-mobile@2x.png") 2x
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 400px;
+    background-image:
+      image-set(
+        url("../../images/background/map-tablet@1x.webp") 1x,
+        url("../../images/background/map-tablet@1x.png") 1x,
+        url("../../images/background/map-tablet@2x.webp") 2x,
+        url("../../images/background/map-tablet@2x.png") 2x
+      );
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-image:
+      image-set(
+        url("../../images/background/map-desktop@1x.webp") 1x,
+        url("../../images/background/map-desktop@1x.png") 1x,
+        url("../../images/background/map-desktop@2x.webp") 2x,
+        url("../../images/background/map-desktop@2x.png") 2x
+      );
+  }
+}

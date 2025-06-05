@@ -1,0 +1,101 @@
+.promo {
+  padding-block: 40px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-block: 80px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-block: 96px 105px;
+  }
+}
+
+.promo__title {
+  margin-block: 0 32px;
+  width: fit-content;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    margin-left: 40px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 72px;
+    margin-left: 0;
+  }
+}
+
+.promo__form {
+  @include full-flex();
+  row-gap: 16px;
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: center;
+    row-gap: 24px;
+  }
+}
+
+.promo__text {
+  @include font-full($oswald-font, 16px, 24px, 400, $secondary-color);
+  text-align: center;
+  margin-block: 0 8px;
+  width: 100%;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    width: 632px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.promo__email {
+  @include font-full($oswald-font, 20px);
+  text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  height: 56px;
+  line-height: 29.6px;
+  padding: 14px 12px 11px;
+  width: 280px;
+
+  &:user-invalid {
+    outline: 1px solid #ff8282;
+  }
+
+  &:hover {
+    outline-color: #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    outline: 1px solid #e7e7e7;
+    opacity: 0.3;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 376px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 496px;
+  }
+}
+
+.promo__button {
+  padding-block: 14px;
+  width: 100%;
+  height: 56px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 256px;
+    padding-block: 13px;
+  }
+}

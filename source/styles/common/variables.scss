@@ -1,1 +1,30 @@
 /* здесь используйте глобальные переменные */
+$lato-font: "Lato", "Arial", sans-serif;
+$oswald-font: "Oswald", "Arial", sans-serif;
+
+$primary-color: #444444;
+$secondary-color: #000000;
+$primary-bg-color: #ffffff;
+$basic-green: #68b738;
+$basic-green-light: #5eaa2f;
+$basic-grey: #f2f2f2;
+$basic-grey-hover: #ebebeb;
+$decorate-social-color: #d9d9d9;
+$special-grey: #666666;
+$special-dark: #111111;
+$special-dark-grey: #222222;
+$example-color: #eaeaea;
+
+$desktop-width: 1280px;
+$tablet-width: 768px;
+$mobile-width: calc($tablet-width - 1px);
+
+$height-slider-mobile: 256px;
+$width-slider-mobile: 280px;
+
+$line-height-mobile: 37px;
+$line-height-desktop: 36px;
+
+$margin-left-title: 20px;
+$slim-width: 50px;
+$pro-width: 67px;

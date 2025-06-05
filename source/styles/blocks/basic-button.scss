@@ -1,0 +1,53 @@
+.basic-button {
+  @include font-full($oswald-font, 16px, 20px, 400, $primary-bg-color);
+  padding: 10px 44px;
+  display: block;
+  text-transform: uppercase;
+  background-color: $basic-green;
+  text-align: center;
+  border-color: transparent;
+
+  &:hover {
+    background-color: $basic-green-light;
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-color: $basic-green-light;
+  }
+
+  &:active {
+    color: rgba($primary-bg-color, 0.3);
+  }
+
+  &--secondary {
+    color: $primary-color;
+    background-color: $basic-grey;
+
+    &:hover {
+      color: $primary-color;
+      background-color: $basic-grey-hover;
+    }
+
+    &:focus {
+      color: $primary-color;
+      background-color: $basic-grey-hover;
+    }
+
+    &:active {
+      color: $primary-color;
+      background-color: $basic-grey-hover;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &--accent {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

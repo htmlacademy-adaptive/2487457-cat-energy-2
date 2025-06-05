@@ -1,0 +1,47 @@
+.parameter {
+  @include full-flex(center, center, column nowrap);
+  gap: 8px;
+  position: relative;
+}
+
+.parameter__meaning {
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+  padding: 14px 20px 16px;
+  outline: 1px solid #cdcdcd;
+  border-radius: 4px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 15px 20px 19px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.parameter__name {
+  @include font-full($lato-font, 12px, 12px, 400);
+  margin-top: -17px;
+  text-transform: lowercase;
+  background-color: $example-color;
+  width: 87px;
+  padding-inline: 9px 10px;
+  z-index: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: -17px;
+    font-size: 14px;
+    line-height: 14px;
+    width: 114px;
+    padding-inline: 0;
+    background-color: $primary-bg-color;
+
+    &--different {
+      width: 142px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-color: $basic-grey;
+  }
+}

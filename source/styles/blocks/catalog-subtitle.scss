@@ -1,0 +1,26 @@
+.catalog-subtitle {
+  @include font-full($oswald-font, 24px, 1, 400, $secondary-color);
+  position: relative;
+  background-color: $primary-bg-color;
+  box-shadow: 40px 0 0 0 $primary-bg-color, -40px 0 0 0 $primary-bg-color;
+
+  &::before {
+    @include before-after(100vw, 2px);
+    background-color: $basic-green;
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    box-shadow: 100vw 0 0 0 $basic-green;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 1;
+  }
+}
