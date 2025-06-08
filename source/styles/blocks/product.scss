@@ -4,8 +4,9 @@
   grid-template-rows: repeat(3, auto);
   justify-content: start;
   align-items: start;
-  row-gap: 11px;
+  row-gap: 12px;
   padding: 20px clamp(20px, calc((100vw - 280px) / 2), calc((100vw - 280px) / 2)) 25px;
+  margin-block: 0;
 
   @media screen and (min-width: $tablet-width) {
     padding: 10px 37px 40px;
@@ -62,6 +63,11 @@
   }
 }
 
+/* .product p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ */
 .product__image-link {
   display: block;
   width: 140px;
@@ -257,7 +263,7 @@
   }
 }
 
-.product__text {
+p.product__text {
   font-size: 12px;
   line-height: 16px;
   text-align: center;

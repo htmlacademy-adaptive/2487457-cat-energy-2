@@ -30,7 +30,7 @@
       url("../../images/background/map-mobile@2x.png") 2x
     );
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 
   @media screen and (min-width: $tablet-width) {

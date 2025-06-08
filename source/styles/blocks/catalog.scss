@@ -15,6 +15,10 @@
   }
 }
 
+.catalog p {
+  margin-block: 0;
+}
+
 .catalog__title {
   @include font-full($oswald-font, 36px, 36px, 400, $secondary-color);
   margin: 0 auto 41px;
